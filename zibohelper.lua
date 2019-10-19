@@ -164,12 +164,11 @@ if PLANE_ICAO == "B738"then
         tif_step = tif_step + 1
     end
     function tif_loop()
-        -- logMsg("ZiboHelper: tif_step = " .. tostring(tif_step))
         -- Check trigger
         if tif_step == 0 then
-            if (dr_flap == 0.0 and tif_previous_flap ~= 0.0) then
-            --and (dr_gear == 2)
-            --and (dr_groundspeed < 30.0) then
+            if (dr_flap == 0.0 and tif_previous_flap ~= 0.0)
+            and (dr_gear == 2)
+            and (dr_groundspeed < 30.0) then
                 tif_next(1.0)
             end
             tif_previous_flap = dr_flap
