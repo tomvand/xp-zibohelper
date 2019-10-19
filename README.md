@@ -8,5 +8,5 @@ Functions:
 
 Commands
 - `zibohelper/fd_toggle_both_cpt`: Toggle both flight directors. Captain's side is MA.
-- `zibohelper/ap_at_disco`: Disconnect both autopilot and autothrottle. (TODO: cancel annunciators)
+- `zibohelper/ap_at_disco`: Disconnect both autopilot and autothrottle. Push annunciators.
 - `zibohelper/speedbrake_arm_toggle`: Arm or retract speedbrake.
