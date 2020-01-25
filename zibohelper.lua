@@ -1,4 +1,4 @@
-if PLANE_ICAO == "B738"then
+if PLANE_ICAO == "B738" then
     logMsg("ZiboHelper: detected PLANE_ICAO == B738")
 
 
