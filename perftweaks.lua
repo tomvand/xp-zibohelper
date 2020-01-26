@@ -7,11 +7,13 @@ function clouds()
 
     -- xp11_clouds.lua
     -- https://forums.x-plane.org/index.php?/forums/topic/118971-clouds-killing-fps/
+    -- https://forums.x-plane.org/index.php?/forums/topic/106529-ultra-weather-xp-v15-script/&page=2
+    -- https://www.avsim.com/forums/topic/492132-x-plane-10-clouds-datarefs-questions/page/3/?tab=comments#comment-3459349
   	set( "sim/private/controls/clouds/first_res_3d", 3)
-  	set( "sim/private/controls/clouds/last_res_3d", 5)
+  	set( "sim/private/controls/clouds/last_res_3d", 4) -- 5
   	set( "sim/private/controls/clouds/cloud_shadow_lighten_ratio", 0.0) -- was 0.85, 0 fixes flickering
   	set( "sim/private/controls/clouds/plot_radius", 1.1)
-  	set( "sim/private/controls/clouds/overdraw_control", 0.85)
+  	set( "sim/private/controls/clouds/overdraw_control", 1.00)
   	set( "sim/private/controls/clouds/shadow_size", 2048)
   	set( "sim/private/controls/clouds/shad_radius", 0.85)
   	set( "sim/private/controls/skyc/white_out_in_clouds", 0)
@@ -33,9 +35,10 @@ function clouds()
     -- more tweaks 2019-12-25
     -- https://steamcommunity.com/app/269950/discussions/0/1694922980047128548/
     set("sim/private/controls/cars/lod_min", 7500.00)
-    set("sim/private/controls/park/static_plane_build_dis", 3000.00)
     set("sim/private/controls/fbo/shadow_cam_size", 2048.00)
-    set("sim/private/controls/park/static_plane_density", 6) -- more intensive
+    set("sim/private/controls/skyc/max_dsf_vis_ever", 60000)
+    -- set("sim/private/controls/park/static_plane_build_dis", 3000.00)
+    -- set("sim/private/controls/park/static_plane_density", 6) -- more intensive
 
   	do_once=true
 	end
