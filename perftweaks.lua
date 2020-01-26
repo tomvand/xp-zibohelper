@@ -37,8 +37,8 @@ function clouds()
     set("sim/private/controls/cars/lod_min", 7500.00)
     set("sim/private/controls/fbo/shadow_cam_size", 2048.00)
     set("sim/private/controls/skyc/max_dsf_vis_ever", 60000)
-    -- set("sim/private/controls/park/static_plane_build_dis", 3000.00)
-    -- set("sim/private/controls/park/static_plane_density", 6) -- more intensive
+    set("sim/private/controls/park/static_plane_build_dis", 10000.00)
+    set("sim/private/controls/park/static_plane_density", 6) -- more intensive
 
   	do_once=true
 	end
