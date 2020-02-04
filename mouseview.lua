@@ -24,13 +24,12 @@ if PLANE_ICAO == "B738" then
         "sim/view/quick_look_0", -- EFB
         "sim/view/quick_look_3", -- radio stack
         "sim/view/quick_look_2", -- CDU
-        "sim/view/quick_look_1", -- CDU + ND + EFIS
         "sim/view/quick_look_5", -- MCP
         "sim/view/quick_look_4", -- CPT view
         "sim/view/quick_look_8", -- Overhead
         "sim/view/quick_look_9"  -- AFT Overhead
     }
-    center_view = 6
+    center_view = 5
 end
 
 local current_view = center_view

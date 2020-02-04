@@ -18,19 +18,30 @@ function clouds()
   	set( "sim/private/controls/clouds/shad_radius", 0.85)
   	set( "sim/private/controls/skyc/white_out_in_clouds", 0)
 
+    -- -- water
+    -- -- https://forums.x-plane.org/index.php?/files/file/51899-lua-script-for-water-enhancement/
+    -- set("sim/private/controls/water/fft_amp1", 40)
+    -- set("sim/private/controls/water/fft_amp2", 1.5)
+    -- set("sim/private/controls/water/fft_amp3", 20)
+    -- set("sim/private/controls/water/fft_amp4", 150)
+    -- set("sim/private/controls/water/fft_scale1", 30)
+    -- set("sim/private/controls/water/fft_scale2", 40)
+    -- set("sim/private/controls/water/fft_scale3", 8)
+    -- set("sim/private/controls/water/fft_scale4", 2)
+    -- set("sim/private/controls/water/noise_speed", 18)
+    -- set("sim/private/controls/water/noise_bias_gen_x", 2)
+    -- set("sim/private/controls/water/noise_bias_gen_y", 1)
+
     -- water
-    -- https://forums.x-plane.org/index.php?/files/file/51899-lua-script-for-water-enhancement/
-    set("sim/private/controls/water/fft_amp1", 40)
-    set("sim/private/controls/water/fft_amp2", 1.5)
-    set("sim/private/controls/water/fft_amp3", 20)
-    set("sim/private/controls/water/fft_amp4", 150)
-    set("sim/private/controls/water/fft_scale1", 30)
-    set("sim/private/controls/water/fft_scale2", 40)
-    set("sim/private/controls/water/fft_scale3", 8)
-    set("sim/private/controls/water/fft_scale4", 2)
-    set("sim/private/controls/water/noise_speed", 18)
-    set("sim/private/controls/water/noise_bias_gen_x", 2)
-    set("sim/private/controls/water/noise_bias_gen_y", 1)
+    -- FSEnhancer TrueWaves
+    set( "sim/private/controls/water/fft_amp1", 20)
+    set( "sim/private/controls/water/fft_amp2", 2.4)
+    set( "sim/private/controls/water/fft_amp3", 14)
+    set( "sim/private/controls/water/fft_amp4", 200)
+    set( "sim/private/controls/water/fft_scale1", 10)
+    set( "sim/private/controls/water/fft_scale2", 100)
+    set( "sim/private/controls/water/fft_scale3", 0.5)
+    set( "sim/private/controls/water/fft_scale4", 0.15)
 
     -- more tweaks 2019-12-25
     -- https://steamcommunity.com/app/269950/discussions/0/1694922980047128548/
