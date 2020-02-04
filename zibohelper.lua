@@ -145,21 +145,28 @@ if PLANE_ICAO == "B738" then
     -- Flap lever hysteresis
     logMsg("ZiboHelper: setting up flap axis hysteresis...")
     local FLAP_AXIS_INDEX = 1 -- hardcoded flap axis number
+    local flap_hysteresis_state = "deactivate" -- function state at startup
     local flap_hysteresis = 0.10 -- % flap position
-    if dr_axis_assignments[FLAP_AXIS_INDEX] ~= 0 then
-        logMsg("ZiboHelper: disabling axis " .. tostring(FLAP_AXIS_INDEX))
-        set_axis_assignment(FLAP_AXIS_INDEX, "none", "normal")
-    end
     function flap_hysteresis_loop()
-        local flap_h_incr = (dr_flap * 8) + 0.5 + flap_hysteresis
-        local flap_h_decr = (dr_flap * 8) - 0.5 - flap_hysteresis
-        if dr_axis_values[FLAP_AXIS_INDEX] * 8 > flap_h_incr then
-            command_once("sim/flight_controls/flaps_down")
-        elseif dr_axis_values[FLAP_AXIS_INDEX] * 8 < flap_h_decr then
-            command_once("sim/flight_controls/flaps_up")
+        if flap_hysteresis_state == "activate" then
+            if dr_axis_assignments[FLAP_AXIS_INDEX] ~= 0 then
+                logMsg("ZiboHelper: disabling axis " .. tostring(FLAP_AXIS_INDEX))
+                set_axis_assignment(FLAP_AXIS_INDEX, "none", "normal")
+            end
+            local flap_h_incr = (dr_flap * 8) + 0.5 + flap_hysteresis
+            local flap_h_decr = (dr_flap * 8) - 0.5 - flap_hysteresis
+            if dr_axis_values[FLAP_AXIS_INDEX] * 8 > flap_h_incr then
+                command_once("sim/flight_controls/flaps_down")
+            elseif dr_axis_values[FLAP_AXIS_INDEX] * 8 < flap_h_decr then
+                command_once("sim/flight_controls/flaps_up")
+            end
         end
     end
     do_every_frame("flap_hysteresis_loop()")
+    add_macro("Flap axis hysteresis",
+            "flap_hysteresis_enabled = \"activate\"",
+            "flap_hysteresis_enabled = \"deactivate\"",
+            flap_hysteresis_state)
     logMsg("ZiboHelper: ok.")
 
 
