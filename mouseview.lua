@@ -21,7 +21,7 @@ local center_view = 6
 -- aircraft-specific views
 if PLANE_ICAO == "B738" then
     view_commands = {
-        "sim/view/quick_look_0", -- EFB
+        --"sim/view/quick_look_0", -- EFB
         "sim/view/quick_look_3", -- radio stack
         "sim/view/quick_look_2", -- CDU
         "sim/view/quick_look_5", -- MCP
@@ -29,7 +29,7 @@ if PLANE_ICAO == "B738" then
         "sim/view/quick_look_8", -- Overhead
         "sim/view/quick_look_9"  -- AFT Overhead
     }
-    center_view = 5
+    center_view = 4
 end
 
 local current_view = center_view

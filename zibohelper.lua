@@ -3,7 +3,7 @@ if PLANE_ICAO == "B738" then
 
 
     -- Datarefs
-    dataref("dr_flap", "sim/cockpit2/controls/flap_ratio")
+    dataref("dr_flap", "laminar/B738/flt_ctrls/flap_lever")
     dataref("dr_fd_cpt", "laminar/B738/switches/autopilot/fd_ca", "writeable")
     dataref("dr_fd_fo", "laminar/B738/switches/autopilot/fd_fo", "writeable")
     dataref("dr_fd_cpt_pos", "laminar/B738/autopilot/flight_director_pos")
@@ -144,11 +144,10 @@ if PLANE_ICAO == "B738" then
 
     -- Flap lever hysteresis
     logMsg("ZiboHelper: setting up flap axis hysteresis...")
-    local FLAP_AXIS_INDEX = 1 -- hardcoded flap axis number
-    local flap_hysteresis_state = "deactivate" -- function state at startup
+    local FLAP_AXIS_INDEX = 79 -- hardcoded flap axis number
     local flap_hysteresis = 0.10 -- % flap position
     function flap_hysteresis_loop()
-        if flap_hysteresis_state == "activate" then
+        if dr_axis_values[FLAP_AXIS_INDEX] >= 0.0 then
             if dr_axis_assignments[FLAP_AXIS_INDEX] ~= 0 then
                 logMsg("ZiboHelper: disabling axis " .. tostring(FLAP_AXIS_INDEX))
                 set_axis_assignment(FLAP_AXIS_INDEX, "none", "normal")
@@ -163,10 +162,6 @@ if PLANE_ICAO == "B738" then
         end
     end
     do_every_frame("flap_hysteresis_loop()")
-    add_macro("Flap axis hysteresis",
-            "flap_hysteresis_enabled = \"activate\"",
-            "flap_hysteresis_enabled = \"deactivate\"",
-            flap_hysteresis_state)
     logMsg("ZiboHelper: ok.")
 
 
@@ -175,6 +170,7 @@ if PLANE_ICAO == "B738" then
     --      Flap lever moved to UP (because the joystick axis needs to be moved up manually)
     --      Gear is DOWN
     --      Ground speed < 60kt
+    --      Landing lights ON
     -- Automatic actions: see script below
     -- Weather radar is left to the captain
     logMsg("ZiboHelper: setting up taxi in flow...")
@@ -193,7 +189,8 @@ if PLANE_ICAO == "B738" then
         if tif_step == 0 then
             if (dr_flap == 0.0 and tif_previous_flap ~= 0.0)
             and (dr_gear == 2)
-            and (dr_groundspeed < 30.0) then
+            and (dr_groundspeed < 30.0)
+            and (dr_land_lights_left ~= 0) then
                 tif_next(1.0)
             end
             tif_previous_flap = dr_flap
