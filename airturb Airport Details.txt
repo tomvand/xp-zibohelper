@@ -1,0 +1,73 @@
+Airturb Airport Details - excerpts from local charts 
+
+Feel free to add your own to the airturb.txt file (carefully!) according to the README instructions.
+
+EDDS You may notice turbulent air just above a power plant cooling tower (located approx. 6 nm from runway 25) in certain weather conditions.
+
+EGAC Pilots should anticipate windshear on approach to runway 22 and departure from runway 04 when the surface wind direction is between 100° and 160° and wind speed is 15 knots or higher. Due to strong wind conditions, turbulence may be expected on approach or climb out from either runway.
+
+EGBE Turbulence may occur on final approach to runway 23 during strong south westerly winds.
+
+EGCC You may encounter medium to severe turbulence and wind shear when approaching runway 23R with strong winds from the north-west.
+
+EGFF Pilots are warned when landing on runway 30 in strong west to south-westerly winds of the possibility of terrain induced turbulence on short final. During strong north-westerly to north-easterly winds possibility of turbulence caused by hangar Northeast on runway 12 threshold.
+
+EGHI Terrain induced turbulence is possible on approach to runway 02, within 2 nm from touchdown, particularly when strong easterly winds occur. Buildings induced turbulence is possible on approach to runway 20, within 2 nm from touchdown, when strong surface winds occur.
+
+EGHQ Possibility of terrain induced turbulence and wind shear effects when landing on runways 12 and 30.
+
+EGJJ Turbulence and variable wind conditions on approach & landing runway 09.
+
+EGKK Strong southerly / south-westerly winds can cause building induced turbulence and windshear effects when landing on runway 26L/R.
+
+EGLL Building-induced turbulence and large windshear effects likely when landing on runway 27R in strong south / south-westerly winds.
+
+EGMH Caution when landing on runway 28 when surface wind is northwesterly or southerly: turbulence may be encountered on short final.
+
+EGNS WARNING: Windshear exists on short final rwy 08 when wind is from South-East.
+
+EGNT When Runway25 is in use and the wind direction is from 160° through south to 190°,pilots should expect wind disturbance and possible negative gradient.
+
+EGNX Pilots are warned of the possibility of building induced turbulence and wind-shear when landing on Runway 09 in strong southerly winds.
+
+EGPB During strong wind conditions turbulence may be expected on approach to, or climb out from, any runway.
+
+EGPE In a strong southerly airstream, severe turbulance may occur below 4000 ft. In lee wave conditions, the turbulance may be particularly bad at very low levels
+
+EGSH Wind Shear and turbulence can occur on final approach to Runway 27 during periods of strong southerly or south westerly winds
+
+EGTE Pilotsarewarned,whenlandingonRunway26,ofthepossibilityofTerrain/Buildinginducedturbulanceandwindshear effects.
+
+EHAM During approaches to the RWYs 04 and 22 pilots must be prepared for turbulence, windshear and windgradient, whether or not in combination due to the presence of large buildings and a jet testing station underneath the circuits. Due to these circumstances it may happen that during the approaches to RWY 04 or take-off from RWY 22 in the vicinity of the buildings SE of THR RWY 04 handling of the aircraft becomes rather difficult.
+
+EHEH (no effects)
+
+EHRD Caution during approach to RWY 06 with south-eastern (light, moderate or strong) wind, pilots should be aware and must be prepared for the possibility of building-induced turbulence, wind shear and wind gradient effects over the THR and TDZ of RWY 06. During these circumstances, while landing at RWY 06, pilots should be aware of suddenly increased turbulence.
+
+EKVG Experience medium to strong turbulence when approaching both runways and strong wind coming from north-east or south-west.
+
+KDEN There will be medium to strong turbulence up to a high altitude, when the wind blows over the Rocky Mountains. This applies to the whole Denver area (including KDEN and other airports in that area).
+
+LDDU Be aware of strong turbulence and wind-shear when in final approach to runway 12 with north-easterly winds.
+
+LEBB Severe turbulence may be experienced when the wind is blowing over the mountains south of the airport.
+
+LFBO (no effects)
+
+LFPG (no effects)
+
+LICJ Aerodrome frequently affected by terrain-induced wind shear phenomena, mostly originated by winds having a 10-20 kt intensity and a 150°-270° direction at ground level and a higher than 15 kt intensity and SW direction at 1500 m. The sheltering by MT Pecoraro originates a descending flow associated with ground divergence and vortices which are highly variable both in space and time
+
+LOWI medium to strong changes in wind speed and direction during foehn conditions in the Inntal and surrounding valleys.
+
+LOWS (no effects)
+
+LPMA medium to strong turbulence / wind shear as you get closer to the mountains when approaching both runway 05 and 23, especially with wind directions from north-west and north-east. 
+
+LSGG (no effects)
+
+LSZH (no effects)
+
+LXGB Experience strong turbulence in the final approach areas when approaching runway 09 and 27 with wind directions from south-east to south-west. Note, that there might be wind shear just before touchdown, especially on runway 09.
+
+VHHH Windshear and sudden wind shifts may occur when departing or approaching VHHH, especially when the wind blows from the south or south-east (over the hills). Light turbulence and wind shear might also occur if the wind blows over the northern hills (wind from north to north-east).
