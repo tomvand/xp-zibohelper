@@ -59,6 +59,12 @@ function clouds()
     -- WATER
     --------------------------------------------------------------------
     -- tomvand 2020-02-16
+    -- notes:
+    -- fft_amp#: wave intensity, higher is stronger
+    -- fft_scale#: wave size, higher is smaller
+    -- noise_speed: animation speed, lower is faster
+    -- noise_bias_gen_x: animation speed factor, higher is faster. Not 100% sure. Controls FFT 3 and 4.
+    -- noise_bias_gen_y: animation speed factor, higher is faster. Multiplied with _x, most effect on FFT 4.
     -- FFT 1 (no idea)
     set("sim/private/controls/water/fft_amp1", 2.5)
     set("sim/private/controls/water/fft_scale1", 4)
