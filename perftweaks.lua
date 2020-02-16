@@ -58,58 +58,22 @@ function clouds()
     --------------------------------------------------------------------
     -- WATER
     --------------------------------------------------------------------
-
-    -- -- water
-    -- -- https://forums.x-plane.org/index.php?/files/file/51899-lua-script-for-water-enhancement/
-    -- set("sim/private/controls/water/fft_amp1", 40)
-    -- set("sim/private/controls/water/fft_amp2", 1.5)
-    -- set("sim/private/controls/water/fft_amp3", 20)
-    -- set("sim/private/controls/water/fft_amp4", 150)
-    -- set("sim/private/controls/water/fft_scale1", 30)
-    -- set("sim/private/controls/water/fft_scale2", 40)
-    -- set("sim/private/controls/water/fft_scale3", 8)
-    -- set("sim/private/controls/water/fft_scale4", 2)
-    -- set("sim/private/controls/water/noise_speed", 18)
-    -- set("sim/private/controls/water/noise_bias_gen_x", 2)
-    -- set("sim/private/controls/water/noise_bias_gen_y", 1)
-
-    -- -- water
-    -- -- FSEnhancer TrueWaves
-    -- set( "sim/private/controls/water/fft_amp1", 20)
-    -- set( "sim/private/controls/water/fft_amp2", 2.4)
-    -- set( "sim/private/controls/water/fft_amp3", 14)
-    -- set( "sim/private/controls/water/fft_amp4", 200)
-    -- set( "sim/private/controls/water/fft_scale1", 10)
-    -- set( "sim/private/controls/water/fft_scale2", 100)
-    -- set( "sim/private/controls/water/fft_scale3", 0.5)
-    -- set( "sim/private/controls/water/fft_scale4", 0.15)
-
-    -- Vivid Water (simplified, only <= 6000m values)
-    -- https://forums.x-plane.org/index.php?/files/file/48315-vivid-sky/
+    -- tomvand 2020-02-16
+    -- FFT 1 (no idea)
     set("sim/private/controls/water/fft_amp1", 2.5)
-    set("sim/private/controls/water/fft_amp2", 1.5)
-    set("sim/private/controls/water/fft_amp3", 16)
-    set("sim/private/controls/water/fft_amp4", 150)
     set("sim/private/controls/water/fft_scale1", 4)
-    set("sim/private/controls/water/fft_scale2", 60)
-    set("sim/private/controls/water/fft_scale3", 6)
-    set("sim/private/controls/water/fft_scale4", 2)
-    set("sim/private/controls/water/noise_speed", 25)
+    -- FFT 2 (flickering)
+    set("sim/private/controls/water/fft_amp2", 20)
+    set("sim/private/controls/water/fft_scale2", 19)
+    set("sim/private/controls/water/noise_speed", 5)
+    -- FFT 3 (slow, small waves)
+    set("sim/private/controls/water/fft_amp3", 5)
+    set("sim/private/controls/water/fft_scale3", 47)
     set("sim/private/controls/water/noise_bias_gen_x", 2)
-    set("sim/private/controls/water/noise_bias_gen_y", 1)
-
-    -- water (own settings)
-    -- set( "sim/private/controls/water/fft_amp1", 20)
-    -- set( "sim/private/controls/water/fft_amp2", 2.4)
-    -- set( "sim/private/controls/water/fft_amp3", 14)
-    -- set( "sim/private/controls/water/fft_amp4", 200)
-    -- set( "sim/private/controls/water/fft_scale1", 11)
-    -- set( "sim/private/controls/water/fft_scale2", 97)
-    -- set( "sim/private/controls/water/fft_scale3", 0.5)
-    -- set( "sim/private/controls/water/fft_scale4", 0.17)
-    -- set("sim/private/controls/water/noise_speed", 18)
-    -- set("sim/private/controls/water/noise_bias_gen_x", 2)
-    -- set("sim/private/controls/water/noise_bias_gen_y", 1)
+    -- FFT 4 (large, fast waves)
+    set("sim/private/controls/water/fft_amp4", 50)
+    set("sim/private/controls/water/fft_scale4", 2)
+    set("sim/private/controls/water/noise_bias_gen_y", 0.1)
 
 
     --------------------------------------------------------------------
