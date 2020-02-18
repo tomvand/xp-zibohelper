@@ -9,6 +9,7 @@ if PLANE_ICAO == "B738" then
     dataref("dr_fd_cpt_pos", "laminar/B738/autopilot/flight_director_pos")
     dataref("dr_fd_fo_pos", "laminar/B738/autopilot/flight_director_fo_pos")
     dataref("dr_speedbrake", "laminar/B738/flt_ctrls/speedbrake_lever")
+    dataref("dr_throttle_all", "sim/cockpit2/engine/actuators/throttle_ratio_all")
     dataref("dr_gear", "laminar/B738/switches/landing_gear")
     dataref("dr_groundspeed", "sim/flightmodel/position/groundspeed")
     dataref("dr_elv_trim", "sim/flightmodel/controls/elv_trim")
@@ -140,6 +141,17 @@ if PLANE_ICAO == "B738" then
             "speedbrake_arm_hold()",
             "speedbrake_arm_release()")
     logMsg("ZiboHelper: ok.")
+
+
+    -- Speedbrake reminder
+    logMsg("ZiboHelper: setting up speedbrake reminder...")
+    function speedbrake_reminder_draw()
+        if dr_speedbrake > 0.0 and dr_throttle_all > 0.0 then
+            glColor4f(1.0, 0.0, 0.0, 1.0)
+            draw_string_Helvetica18(200, SCREEN_HIGHT / 2, "SPEEDBRAKE!")
+        end
+    end
+    do_every_draw("sppedbrake_reminder_draw()")
 
 
     -- Flap lever hysteresis
