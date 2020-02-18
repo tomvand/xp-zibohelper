@@ -188,3 +188,17 @@ function clouds()
 	end
 end
 do_often("clouds()")
+
+
+dataref("first_cloud_base","sim/weather/cloud_base_msl_m[0]", "readonly")
+dataref("elevation","sim/flightmodel/position/elevation", "readonly")
+
+function toggle_fft_water()
+    -- Disable fft water above first cloud level or FL100
+    if elevation > cloud_base_msl_m * 1.5 or elevation > 3000 then
+      set("sim/private/controls/reno/draw_fft_water", 0)
+    else
+      set("sim/private/controls/reno/draw_fft_water", 1)
+    end
+end
+do_often("toggle_fft_water()")
