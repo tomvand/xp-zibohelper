@@ -190,12 +190,15 @@ end
 do_often("clouds()")
 
 
-dataref("first_cloud_base","sim/weather/cloud_base_msl_m[0]", "readonly")
-dataref("elevation","sim/flightmodel/position/elevation", "readonly")
+dataref("dr_cloud_tops0", "sim/weather/cloud_tops_msl_m[0]", "readonly")
 
 function toggle_fft_water()
+    if not dr_cloud_tops0 then
+      logMsg("perftweaks: waiting for cloud_base_msl_m to become available...")
+      return
+    end
     -- Disable fft water above first cloud level or FL100
-    if elevation > cloud_base_msl_m * 1.5 or elevation > 3000 then
+    if ELEVATION > dr_cloud_tops0 or ELEVATION > 3333 then
       set("sim/private/controls/reno/draw_fft_water", 0)
     else
       set("sim/private/controls/reno/draw_fft_water", 1)

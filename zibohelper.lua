@@ -93,11 +93,19 @@ if PLANE_ICAO == "B738" then
     logMsg("ZiboHelper: setting up A/P A/T disco command...")
     function ap_at_disco()
         -- Push lights first (so requires second push to silence)
+        command_begin("laminar/B738/push_button/ap_light_pilot")
         command_once("laminar/B738/push_button/ap_light_pilot")
+        command_end("laminar/B738/push_button/ap_light_pilot")
+        command_begin("laminar/B738/push_button/at_light_pilot")
         command_once("laminar/B738/push_button/at_light_pilot")
+        command_end("laminar/B738/push_button/at_light_pilot")
         -- Push disconnect buttons
+        command_begin("laminar/B738/autopilot/capt_disco_press")
         command_once("laminar/B738/autopilot/capt_disco_press")
+        command_end("laminar/B738/autopilot/capt_disco_press")
+        command_begin("laminar/B738/autopilot/left_at_dis_press")
         command_once("laminar/B738/autopilot/left_at_dis_press")
+        command_end("laminar/B738/autopilot/left_at_dis_press")
     end
     create_command("zibohelper/ap_at_disco",
                    "Disconnect A/P and A/T, push annunciators",
@@ -146,12 +154,12 @@ if PLANE_ICAO == "B738" then
     -- Speedbrake reminder
     logMsg("ZiboHelper: setting up speedbrake reminder...")
     function speedbrake_reminder_draw()
-        if dr_speedbrake > 0.0 and dr_throttle_all > 0.0 then
+        if dr_speedbrake > 0.5 and dr_throttle_all > 0.0 then
             glColor4f(1.0, 0.0, 0.0, 1.0)
-            draw_string_Helvetica18(200, SCREEN_HIGHT / 2, "SPEEDBRAKE!")
+            draw_string_Helvetica_18(200, SCREEN_HIGHT / 2, "SPEEDBRAKE!")
         end
     end
-    do_every_draw("sppedbrake_reminder_draw()")
+    do_every_draw("speedbrake_reminder_draw()")
 
 
     -- Flap lever hysteresis
