@@ -120,6 +120,26 @@ function clouds()
     -- set( "sim/private/controls/skyc/shadow_level_ocast", 0.2)
 
 
+    -- https://forums.x-plane.org/index.php?/forums/topic/150598-xp11-default-clouds-look-amazing/&tab=comments#comment-1430099
+    -- set( "sim/private/controls/clouds/first_res_3d", 3)
+    -- set( "sim/private/controls/clouds/cloud_shadow_lighten_ratio", 0.9)
+    -- set( "sim/private/controls/clouds/plot_radius", 0.8)
+    -- set( "sim/private/controls/clouds/overdraw_control", 0.5)
+    -- set( "sim/private/controls/clouds/shadow_size", 2048)
+    -- set( "sim/private/controls/clouds/shad_radius", 0.8)
+    -- set( "sim/private/controls/clouds/limit_far", 0.2)
+    -- set( "sim/private/controls/clouds/spec_gain", 6.0)
+    -- set( "sim/private/controls/cloud/sample_opacity", 0.25)
+    -- set( "sim/private/controls/cloud/fade_far_end", 0.995)
+    -- set( "sim/private/controls/skyc/white_out_in_clouds", 0.0)
+    set( "sim/private/controls/clouds/count_ratio/0", 0.20)
+    set( "sim/private/controls/clouds/count_ratio/1", 0.30)
+    set( "sim/private/controls/clouds/count_ratio/2", 0.40)
+    set( "sim/private/controls/clouds/count_ratio/3", 0.40)
+    set( "sim/private/controls/clouds/count_ratio/4", 0.30)
+    set( "sim/private/controls/clouds/count_ratio/5", 0.20) 
+
+
     -- xp11_clouds.lua
     -- https://forums.x-plane.org/index.php?/forums/topic/118971-clouds-killing-fps/
     -- https://forums.x-plane.org/index.php?/forums/topic/106529-ultra-weather-xp-v15-script/&page=2
