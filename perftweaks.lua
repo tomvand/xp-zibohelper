@@ -53,7 +53,7 @@ function clouds()
     set( "sim/private/controls/atmo/scatter_raleigh_r",     2.5 )
     set( "sim/private/controls/hdr/sky_gain",     	3.5 )
     set( "sim/private/controls/hdr/white_point",     	3.5 )
-    set( "sim/private/controls/fog/fog_be_gone",    1.6 )
+    -- set( "sim/private/controls/fog/fog_be_gone",    1.6 )
     set( "sim/private/controls/terrain/fog_clip_pad",    1500.0 )
     set( "sim/private/controls/terrain/fog_clip_scale",    0.0 )
     --clouds lighting
@@ -152,47 +152,49 @@ function clouds()
   	set( "sim/private/controls/clouds/overdraw_control", 0.75) -- slight performance hit, but looks MUCH better
   	-- set( "sim/private/controls/clouds/shadow_size", 2048) -- set by vivid sky
   	-- set( "sim/private/controls/clouds/shad_radius", 0.85) -- set by vivid sky
-  	set( "sim/private/controls/skyc/white_out_in_clouds", 0)
+    set( "sim/private/controls/skyc/white_out_in_clouds", 0)
+    set( "sim/private/controls/fog/fog_be_gone",    1.2 )
 
 
     --------------------------------------------------------------------
     -- WATER
     --------------------------------------------------------------------
     -- Allan RIVIERE 1.2
-    set("sim/private/controls/water/fft_amp1", 40)
-    set("sim/private/controls/water/fft_amp2", 1.5)
-    set("sim/private/controls/water/fft_amp3", 20)
-    set("sim/private/controls/water/fft_amp4", 150)
-    set("sim/private/controls/water/fft_scale1", 30)
-    set("sim/private/controls/water/fft_scale2", 40)
-    set("sim/private/controls/water/fft_scale3", 8)
-    set("sim/private/controls/water/fft_scale4", 2)
-    set("sim/private/controls/water/noise_speed", 18)
-    set("sim/private/controls/water/noise_bias_gen_x", 2)
-    set("sim/private/controls/water/noise_bias_gen_y", 1)
+    -- set("sim/private/controls/water/fft_amp1", 40)
+    -- set("sim/private/controls/water/fft_amp2", 1.5)
+    -- set("sim/private/controls/water/fft_amp3", 20)
+    -- set("sim/private/controls/water/fft_amp4", 150)
+    -- set("sim/private/controls/water/fft_scale1", 30)
+    -- set("sim/private/controls/water/fft_scale2", 40)
+    -- set("sim/private/controls/water/fft_scale3", 8)
+    -- set("sim/private/controls/water/fft_scale4", 2)
+    -- set("sim/private/controls/water/noise_speed", 18)
+    -- set("sim/private/controls/water/noise_bias_gen_x", 2)
+    -- set("sim/private/controls/water/noise_bias_gen_y", 1)
 
-    -- tomvand 2020-02-16
+    -- tomvand 2020-02-19
     -- notes:
     -- fft_amp#: wave intensity, higher is stronger
     -- fft_scale#: wave size, higher is smaller
     -- noise_speed: animation speed, lower is faster
-    -- noise_bias_gen_x: animation speed factor, higher is faster. Not 100% sure. Controls FFT 3 and 4.
-    -- noise_bias_gen_y: animation speed factor, higher is faster. Scales *and* additive with _x, most effect on FFT 4.
+    -- noise_bias_gen_x: animation speed factor?, higher is faster
+    -- noise_bias_gen_y: animation speed factor?, higher is faster
     -- FFT 1 (no idea)
-    -- set("sim/private/controls/water/fft_amp1", 2.5)
-    -- set("sim/private/controls/water/fft_scale1", 4)
-    -- -- FFT 2 (flickering)
-    -- set("sim/private/controls/water/fft_amp2", 20)
-    -- set("sim/private/controls/water/fft_scale2", 19)
-    -- set("sim/private/controls/water/noise_speed", 5)
-    -- -- FFT 3 (slow, small waves)
-    -- set("sim/private/controls/water/fft_amp3", 5)
-    -- set("sim/private/controls/water/fft_scale3", 47)
-    -- set("sim/private/controls/water/noise_bias_gen_x", 2)
-    -- -- FFT 4 (large, fast waves)
-    -- set("sim/private/controls/water/fft_amp4", 50)
-    -- set("sim/private/controls/water/fft_scale4", 2)
-    -- set("sim/private/controls/water/noise_bias_gen_y", 0.1)
+    set("sim/private/controls/water/fft_amp1", 40)
+    set("sim/private/controls/water/fft_scale1", 30)
+    -- FFT 2 (static small waves)
+    set("sim/private/controls/water/fft_amp2", 30)
+    set("sim/private/controls/water/fft_scale2", 10)
+    -- FFT 3 (slow, huge waves (looks like wind gusts))
+    set("sim/private/controls/water/fft_amp3", 40)
+    set("sim/private/controls/water/fft_scale3", 0.5)
+    -- FFT 4 (fast, small waves)
+    set("sim/private/controls/water/fft_amp4", 40)
+    set("sim/private/controls/water/fft_scale4", 2)
+    -- Animation speeds
+    set("sim/private/controls/water/noise_speed", 14)
+    set("sim/private/controls/water/noise_bias_gen_x", 1)
+    set("sim/private/controls/water/noise_bias_gen_y", 1)
 
 
     --------------------------------------------------------------------
