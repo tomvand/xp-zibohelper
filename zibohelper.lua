@@ -164,7 +164,7 @@ if PLANE_ICAO == "B738" then
 
     -- Flap lever hysteresis
     logMsg("ZiboHelper: setting up flap axis hysteresis...")
-    local FLAP_AXIS_INDEX = 79 -- hardcoded flap axis number
+    local FLAP_AXIS_INDEX = 51 -- hardcoded flap axis number
     local flap_hysteresis = 0.10 -- % flap position
     function flap_hysteresis_loop()
         if dr_axis_values[FLAP_AXIS_INDEX] >= 0.0 then
