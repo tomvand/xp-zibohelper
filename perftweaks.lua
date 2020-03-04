@@ -210,7 +210,7 @@ function clouds()
     set("sim/private/controls/park/static_plane_density", 6) -- more intensive
     set("sim/private/controls/lights/exponent_far", 0.5) -- brighter lights (scenery and ai traffic)
 
-    set("sim/private/controls/shadow/cockpit_near_proxy", 8) -- simplify cockpit shadow casting shape? Large fps gain (3~5)
+    set("sim/private/controls/shadow/cockpit_near_proxy", 4) -- simplify cockpit shadow casting shape? Large fps gain (3~5 when set to 8)
     set("sim/private/controls/shadow/cockpit_near_adjust", 3, true) -- shadow resolution
 
     -- Vivid Tweaks (partial)
@@ -226,17 +226,19 @@ do_often("clouds()")
 
 
 dataref("dr_cloud_tops0", "sim/weather/cloud_tops_msl_m[0]", "readonly")
-
+local time_prev = 0
 function toggle_fft_water()
     if not dr_cloud_tops0 then
       logMsg("perftweaks: waiting for cloud_base_msl_m to become available...")
       return
     end
-    -- Disable fft water above first cloud level or FL100
-    if ELEVATION > dr_cloud_tops0 or ELEVATION > 3333 then
+    local time = os.clock()
+    -- Disable fft water above first cloud level or FL100 and < 25fps
+    if (ELEVATION > dr_cloud_tops0 or ELEVATION > 3333) and ((time - time_prev) > 0.04) then
       set("sim/private/controls/reno/draw_fft_water", 0)
     else
       set("sim/private/controls/reno/draw_fft_water", 1)
     end
+    time_prev = time
 end
-do_often("toggle_fft_water()")
+do_sometimes("toggle_fft_water()")
