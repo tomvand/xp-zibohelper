@@ -9,7 +9,7 @@ if PLANE_ICAO == "B738" then
     dataref("dr_fd_cpt_pos", "laminar/B738/autopilot/flight_director_pos")
     dataref("dr_fd_fo_pos", "laminar/B738/autopilot/flight_director_fo_pos")
     dataref("dr_speedbrake", "laminar/B738/flt_ctrls/speedbrake_lever")
-    dataref("dr_throttle_all", "sim/cockpit2/engine/actuators/throttle_ratio_all")
+    dataref("dr_throttle_all", "sim/cockpit2/engine/actuators/throttle_jet_rev_ratio_all")
     dataref("dr_gear", "laminar/B738/switches/landing_gear")
     dataref("dr_groundspeed", "sim/flightmodel/position/groundspeed")
     dataref("dr_elv_trim", "sim/flightmodel/controls/elv_trim")
