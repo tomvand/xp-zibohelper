@@ -186,7 +186,7 @@ function clouds()
     set("sim/private/controls/water/fft_amp2", 5)
     set("sim/private/controls/water/fft_scale2", 10)
     -- FFT 3 (slow, huge waves (looks like wind gusts))
-    set("sim/private/controls/water/fft_amp3", 40)
+    set("sim/private/controls/water/fft_amp3", 10)
     set("sim/private/controls/water/fft_scale3", 0.5)
     -- FFT 4 (fast, small waves)
     set("sim/private/controls/water/fft_amp4", 40)
@@ -210,8 +210,8 @@ function clouds()
     set("sim/private/controls/park/static_plane_density", 6) -- more intensive
     set("sim/private/controls/lights/exponent_far", 0.5) -- brighter lights (scenery and ai traffic)
 
-    set("sim/private/controls/shadow/cockpit_near_proxy", 4) -- simplify cockpit shadow casting shape? Large fps gain (3~5 when set to 8)
-    set("sim/private/controls/shadow/cockpit_near_adjust", 3, true) -- shadow resolution
+    -- set("sim/private/controls/shadow/cockpit_near_proxy", 4) -- simplify cockpit shadow casting shape? Large fps gain (3~5 when set to 8)
+    set("sim/private/controls/shadow/cockpit_near_adjust", 2, true) -- shadow resolution
 
     -- Vivid Tweaks (partial)
     -- https://forums.x-plane.org/index.php?/files/file/48315-vivid-sky/
