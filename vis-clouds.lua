@@ -145,10 +145,10 @@ function vis_clouds()
       -- https://www.avsim.com/forums/topic/492132-x-plane-10-clouds-datarefs-questions/page/3/?tab=comments#comment-3459349
       -- https://forums.x-plane.org/index.php?/forums/topic/150598-xp11-default-clouds-look-amazing/ -- TODO
         -- set( "sim/private/controls/clouds/first_res_3d", 3) -- set by vivid sky
-        set( "sim/private/controls/clouds/last_res_3d", 4) -- 5
+        -- set( "sim/private/controls/clouds/last_res_3d", 4) -- 5
         -- set( "sim/private/controls/clouds/cloud_shadow_lighten_ratio", 0.0) -- was 0.85, 0 fixes flickering -- set by vivid sky
         -- set( "sim/private/controls/clouds/plot_radius", 1.1) -- set by vivid sky
-        set( "sim/private/controls/clouds/overdraw_control", 0.75) -- slight performance hit, but looks MUCH better
+        -- set( "sim/private/controls/clouds/overdraw_control", 0.75) -- slight performance hit, but looks MUCH better
         -- set( "sim/private/controls/clouds/shadow_size", 2048) -- set by vivid sky
         -- set( "sim/private/controls/clouds/shad_radius", 0.85) -- set by vivid sky
       set( "sim/private/controls/skyc/white_out_in_clouds", 0)
