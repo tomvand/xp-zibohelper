@@ -38,7 +38,7 @@ function vis_clouds()
       set("sim/private/controls/clouds/shad_alpha_dry", 0.6) -- darker shadow
       set("sim/private/controls/clouds/shad_alpha_wet", 1.0) -- darker shadow
       set("sim/private/controls/clouds/limit_far",  0.4) -- reduce shadow flicker, blockiness and increase detail 
-      set("sim/private/controls/clouds/shadow_size", 2048.0)  -- reduce shadow flicker, possibly not used in 11.35
+      -- set("sim/private/controls/clouds/shadow_size", 2048.0)  -- reduce shadow flicker, possibly not used in 11.35, removed in Vulkan?
   
   
       -- TrueHaze (static code only)
