@@ -3,7 +3,10 @@ local do_once = false
 
 function vis_lights()
     if os.clock() > start_time and do_once == false then
-        set("sim/private/controls/lights/exponent_far", 0.5) -- brighter lights (scenery and ai traffic)
+        -- Tuned for TK Ligh Mod 2019
+        -- https://forums.x-plane.org/index.php?/files/file/47394-tk-light-mod-2019/
+        set("sim/private/controls/lights/exponent_near", 0.52)
+        set("sim/private/controls/lights/exponent_far", 0.50)
 
         do_once = true
     end
