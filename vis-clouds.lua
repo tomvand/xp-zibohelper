@@ -10,8 +10,8 @@ function vis_clouds()
 
       -- OWN SETTINGS
       -- Cloud color --
-      set( "sim/private/controls/clouds/ambient_gain", 1.1) -- mostly grayscale ambient lighting
-      set( "sim/private/controls/clouds/diffuse_gain", 0.6) -- not directional, but takes sky/sun color. Very pinkish during sunset.
+      set( "sim/private/controls/clouds/ambient_gain", 1.4) -- mostly grayscale ambient lighting
+      set( "sim/private/controls/clouds/diffuse_gain", 0.6) -- not directional, but takes sky/sun color. Very pinkish during sunset. Not always present.
       set("sim/private/controls/clouds/spec_gain", 0.4) -- sun power through clouds
       set( "sim/private/controls/clouds/light_curve_ratio", 11) -- Controls darker cloud bottom. Multiplied with curve_power in some way.
       set( "sim/private/controls/clouds/light_curve_power", 0.1)
@@ -20,7 +20,7 @@ function vis_clouds()
       set("sim/private/controls/clouds/cloud_shadow_lighten_ratio", 1.0) -- shadow intensity. Overall multiplier with cloud shadow.
       set("sim/private/controls/clouds/shad_alpha_dry", 0.1) -- subtle shadow in dry weather
       set("sim/private/controls/clouds/shad_alpha_wet", 5.0) -- really dark shadow in wet weather. Alpha is clipped, so >1 does not darken but increases shadow size/leaves less gaps.
-      set( "sim/private/controls/skyc/white_out_in_clouds", 1) -- personal preference
+      -- set( "sim/private/controls/skyc/white_out_in_clouds", 1) -- Does not work anymore? Might be X-Visibility... -- personal preference
       set("sim/private/controls/clouds/limit_far",  0.3) -- physical size of cloud shadow texture (0.4: good. Smaller is sharper outlines but artifacts further away)
       -- set("sim/private/controls/clouds/shadow_size", 2048.0) -- not available anymore, crashes script
 
