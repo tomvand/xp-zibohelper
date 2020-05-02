@@ -9,8 +9,14 @@ function vis_clouds()
       -- Tuning based on Cloud Art 3.2 textures and sky colors
 
       -- OWN SETTINGS
+      -- Cloud color --
+      set( "sim/private/controls/clouds/ambient_gain", 1.1) -- mostly grayscale ambient lighting
+      set( "sim/private/controls/clouds/diffuse_gain", 0.6) -- not directional, but takes sky/sun color. Very pinkish during sunset.
+      set("sim/private/controls/clouds/spec_gain", 0.4) -- sun power through clouds
+      set( "sim/private/controls/clouds/light_curve_ratio", 11) -- Controls darker cloud bottom. Multiplied with curve_power in some way.
+      set( "sim/private/controls/clouds/light_curve_power", 0.1)
+      -- Other settings --
       set( "sim/private/controls/clouds/soft_occlude",  0.0) -- not sure
-      set( "sim/private/controls/clouds/ambient_gain", 1.30) -- bumped slightly for less gray clouds
       set("sim/private/controls/clouds/cloud_shadow_lighten_ratio", 1.0) -- shadow intensity. Overall multiplier with cloud shadow.
       set("sim/private/controls/clouds/shad_alpha_dry", 0.1) -- subtle shadow in dry weather
       set("sim/private/controls/clouds/shad_alpha_wet", 5.0) -- really dark shadow in wet weather. Alpha is clipped, so >1 does not darken but increases shadow size/leaves less gaps.
@@ -31,7 +37,7 @@ function vis_clouds()
       -- set("sim/private/controls/clouds/overdraw_control", 0.75) -- helps to reduce cloud flicker
       -- set("sim/private/controls/clouds/ambient_gain", 1.12) -- less blinding in direct sun
       -- set("sim/private/controls/clouds/diffuse_gain", 0.9) -- darker at night/sunst
-      set("sim/private/controls/clouds/spec_gain", 4.0) -- sun power through clouds
+      -- set("sim/private/controls/clouds/spec_gain", 4.0) -- sun power through clouds
       -- set("sim/private/controls/clouds/light_curve_ratio", 0.95) -- cloud volume light top/dark base
       -- set("sim/private/controls/clouds/light_curve_power", 1.2) -- cloud volume light top/dark base
       -- set("sim/private/controls/clouds/check_z_hdr", 0.0) -- fix cloud terrain intersection
@@ -111,8 +117,8 @@ function vis_clouds()
       set( "sim/private/controls/clouds/overdraw_control", 0.1)
       -- set( "sim/private/controls/clouds/ambient_gain", 1.24)
       set( "sim/private/controls/clouds/diffuse_gain", 0)
-      set( "sim/private/controls/clouds/light_curve_ratio", 100)
-      set( "sim/private/controls/clouds/light_curve_power", 100)
+      -- set( "sim/private/controls/clouds/light_curve_ratio", 100)
+      -- set( "sim/private/controls/clouds/light_curve_power", 100)
       -- set( "sim/private/controls/clouds/shad_radius" , 1.0)
       -- set( "sim/private/controls/clouds/shad_alpha_dry" , 0.5)
       -- set( "sim/private/controls/clouds/shad_alpha_wet", 0)
