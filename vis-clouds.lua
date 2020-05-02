@@ -15,6 +15,8 @@ function vis_clouds()
       set("sim/private/controls/clouds/shad_alpha_dry", 0.1) -- subtle shadow in dry weather
       set("sim/private/controls/clouds/shad_alpha_wet", 5.0) -- really dark shadow in wet weather. Alpha is clipped, so >1 does not darken but increases shadow size/leaves less gaps.
       set( "sim/private/controls/skyc/white_out_in_clouds", 1) -- personal preference
+      set("sim/private/controls/clouds/limit_far",  0.3) -- physical size of cloud shadow texture (0.4: good. Smaller is sharper outlines but artifacts further away)
+      -- set("sim/private/controls/clouds/shadow_size", 2048.0) -- not available anymore, crashes script
 
 
   
@@ -47,7 +49,7 @@ function vis_clouds()
       -- set("sim/private/controls/clouds/cloud_shadow_lighten_ratio", 0.94) -- darker shadow, max 1.0
       -- set("sim/private/controls/clouds/shad_alpha_dry", 0.6) -- darker shadow
       -- set("sim/private/controls/clouds/shad_alpha_wet", 1.0) -- darker shadow
-      set("sim/private/controls/clouds/limit_far",  0.4) -- reduce shadow flicker, blockiness and increase detail 
+      -- set("sim/private/controls/clouds/limit_far",  0.4) -- reduce shadow flicker, blockiness and increase detail 
       -- set("sim/private/controls/clouds/shadow_size", 2048.0)  -- reduce shadow flicker, possibly not used in 11.35, removed in Vulkan?
   
   
