@@ -58,11 +58,27 @@ function vis_atmo()
         -- set( "sim/private/controls/skyc/shadow_level_foggy", 0.33)
         -- set( "sim/private/controls/skyc/shadow_level_ocast", 0.2)
 
-        -- X-Visibility
-        xvis_minFog_value = 1.0 -- personal preference, prefer slightly hazy
+
 
         do_once = true
     end
 end
 
 do_often("vis_atmo()")
+
+
+dataref("dr_dewpoint", "sim/weather/dewpoi_sealevel_c")
+dataref("dr_temp", "sim/weather/temperature_sealevel_c")
+function adjust_minfog_by_RH()
+    -- For X-Visibility
+    -- Adjusts the minFog parameter based on the relative humidity
+    local relative_humidity = 100 - 5 * (dr_temp - dr_dewpoint)
+    if relative_humidity < 0 then
+        relative_humidity = 0
+    end
+    if relative_humidity > 100 then
+        relative_humidity = 100
+    end
+    xvis_minFog_value = (relative_humidity / 100) * (relative_humidity / 100) * 1.0  -- room for tweaking
+end
+do_often("adjust_minfog_by_RH()")
