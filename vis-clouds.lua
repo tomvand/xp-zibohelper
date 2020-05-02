@@ -10,6 +10,7 @@ function vis_clouds()
 
       -- OWN SETTINGS
       -- Cloud color --
+      -- Not sure why, but diffuse gain and spec gain do not work reliably...
       set( "sim/private/controls/clouds/ambient_gain", 1.4) -- mostly grayscale ambient lighting
       set( "sim/private/controls/clouds/diffuse_gain", 0.6) -- not directional, but takes sky/sun color. Very pinkish during sunset. Not always present.
       set("sim/private/controls/clouds/spec_gain", 0.4) -- sun power through clouds
