@@ -58,6 +58,9 @@ function vis_atmo()
         -- set( "sim/private/controls/skyc/shadow_level_foggy", 0.33)
         -- set( "sim/private/controls/skyc/shadow_level_ocast", 0.2)
 
+        -- X-Visibility
+        xvis_minFog_value = 1.0 -- personal preference, prefer slightly hazy
+
         do_once = true
     end
 end

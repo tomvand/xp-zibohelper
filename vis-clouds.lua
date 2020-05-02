@@ -103,7 +103,7 @@ function vis_clouds()
         -- set( "sim/private/controls/clouds/shadow_size", 2048) -- set by vivid sky
         -- set( "sim/private/controls/clouds/shad_radius", 0.85) -- set by vivid sky
       set( "sim/private/controls/skyc/white_out_in_clouds", 0)
-      set( "sim/private/controls/fog/fog_be_gone",    1.2 )
+      -- set( "sim/private/controls/fog/fog_be_gone",    1.2 ) -- Disabled for X-Visibility
 
       do_once = true
     end
