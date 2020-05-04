@@ -1,0 +1,34 @@
+==========
+Vivid Sky
+Looked brilliant in recent flightdeck2sim stream (Milan-Amsterdam)
+even without xVision!
+==========
+- Retest vivid sky lua with cloud art and X-Visibility
+- Re-evaluate night lighting: vivid, default, or older vis-light values. MORE TEST FLIGHTS!
+- Re-evaluate water: vivid, default
+- Try cloud art with vivid parameters. Otherwise keep own settings.
+
+==========
+Overall graphics
+Try to adjust gamma for less washed out look
+==========
+- https://forums.x-plane.org/index.php?/forums/topic/139095-xplane-11-gamma-settings/&tab=comments#comment-1332938
+- https://forums.x-plane.org/index.php?/forums/topic/146399-sunset-at-tenerife/
+
+==========
+Sunsets
+Now that I figured out how to use sun pitch angle...
+==========
+- https://forums.x-plane.org/index.php?/forums/topic/146399-sunset-at-tenerife/
+
+==========
+LiveTraffic
+==========
+- Plot nearby aircraft with heading/speed vectors
+- Look up runways in apt.dat? Center on airport?
+
+==========
+If all else fails...
+==========
+- https://reshade.me/forum/troubleshooting/6445-reshade-not-working-in-x-plane-beta-6-vulkan
+
