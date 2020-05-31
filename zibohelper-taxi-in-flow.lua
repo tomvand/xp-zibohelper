@@ -1,5 +1,6 @@
 if PLANE_ICAO == "B738" then
     dataref("dr_flap", "laminar/B738/flt_ctrls/flap_lever")
+    dataref("dr_onground_any", "sim/flightmodel/failures/onground_any")
     dataref("dr_land_lights_left", "laminar/B738/switch/land_lights_left_pos", "writeable")
     dataref("dr_land_lights_right", "laminar/B738/switch/land_lights_right_pos", "writeable")
     dataref("dr_transponder_pos", "laminar/B738/knob/transponder_pos")
@@ -22,10 +23,9 @@ if PLANE_ICAO == "B738" then
 
     -- Taxi in flow
     -- Triggered when:
-    --      Flap lever moved to UP (because the joystick axis needs to be moved up manually)
-    --      Gear is DOWN
-    --      Ground speed < 60kt
+    --      On ground (sim/flightmodel/failures/onground_any)
     --      Landing lights ON
+    --      Flap lever moved to UP (because the joystick axis needs to be moved up manually)
     -- Automatic actions: see script below
     -- Weather radar is left to the captain
     logMsg("ZiboHelper: setting up taxi in flow...")
@@ -43,8 +43,7 @@ if PLANE_ICAO == "B738" then
         -- Check trigger
         if tif_step == 0 then
             if (dr_flap == 0.0 and tif_previous_flap ~= 0.0)
-            and (dr_gear == 2)
-            and (dr_groundspeed < 30.0)
+            and dr_onground_any
             and (dr_land_lights_left ~= 0) then
                 tif_next(1.0)
             end
