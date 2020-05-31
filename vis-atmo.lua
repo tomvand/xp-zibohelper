@@ -10,6 +10,7 @@ function vis_atmo()
         -- set("sim/private/controls/skyc/tone_ratio_clean", 0.50) -- Bit brighter on sunny days
         set("sim/private/controls/skyc/tone_ratio_strat", -1.0)
         set("sim/private/controls/skyc/tone_ratio_ocast", -2.0) -- Much darker during overcast
+        xvis_highAltFogMult = 0.25  -- Reduce X-Visibility high-altitude fog
         -- Leave rest at default values or as set by vivid sky
 
 

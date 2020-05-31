@@ -10,13 +10,14 @@ function vis_clouds()
 
       -- OWN SETTINGS
       -- Cloud color --
-      -- Not sure why, but diffuse gain and spec gain do not work reliably...
-      set( "sim/private/controls/clouds/ambient_gain", 1.26) -- mostly grayscale ambient lighting
-      set( "sim/private/controls/clouds/diffuse_gain", 0.6) -- not directional, but takes sky/sun color. Very pinkish during sunset. Not always present.
-      set("sim/private/controls/clouds/spec_gain", 0.4) -- sun power through clouds
-      set( "sim/private/controls/clouds/light_curve_ratio", 11) -- Controls darker cloud bottom. Multiplied with curve_power in some way.
-      set( "sim/private/controls/clouds/light_curve_power", 0.1)
-      set( "sim/private/controls/skyc/fog_start_lo_alt", 0.95) -- Cloud drawing distance from below
+      -- Appearance of diffuse/spec gain depends on light_curve
+      set( "sim/private/controls/clouds/ambient_gain", 1.3) -- grayscale ambient lighting
+      set( "sim/private/controls/clouds/diffuse_gain", 0.6) -- Sky/sun color. Very pinkish during sunset. Also darker on bottom/far side of clouds.
+      set("sim/private/controls/clouds/spec_gain", 1.5) -- Sun reflection and power through clouds
+      set( "sim/private/controls/clouds/light_curve_ratio", 20) -- Controls darker cloud bottom. Multiplied with curve_power in some way.
+      set( "sim/private/controls/clouds/light_curve_power", 0.08)
+      set( "sim/private/controls/clouds/plot_radius", 1.45) -- Slightly bigger
+      set( "sim/private/controls/skyc/fog_start_lo_alt", 0.5) -- Cloud drawing distance from below
       -- Other settings --
       -- set( "sim/private/controls/clouds/soft_occlude",  0.0) -- not sure
       -- set("sim/private/controls/clouds/cloud_shadow_lighten_ratio", 1.0) -- shadow intensity. Overall multiplier with cloud shadow.
@@ -115,7 +116,7 @@ function vis_clouds()
       -- Version 3.2
       set( "sim/private/controls/clouds/first_res_3d", 3)
       set( "sim/private/controls/clouds/last_res_3d", 5)
-      set( "sim/private/controls/clouds/plot_radius", 1.4)
+      -- set( "sim/private/controls/clouds/plot_radius", 1.4)
       set( "sim/private/controls/clouds/overdraw_control", 0.1)
       -- set( "sim/private/controls/clouds/ambient_gain", 1.24)
       -- set( "sim/private/controls/clouds/diffuse_gain", 0)

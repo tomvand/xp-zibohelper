@@ -1,4 +1,25 @@
 if PLANE_ICAO == "B738" then
+    dataref("dr_flap", "laminar/B738/flt_ctrls/flap_lever")
+    dataref("dr_land_lights_left", "laminar/B738/switch/land_lights_left_pos", "writeable")
+    dataref("dr_land_lights_right", "laminar/B738/switch/land_lights_right_pos", "writeable")
+    dataref("dr_transponder_pos", "laminar/B738/knob/transponder_pos")
+    dataref("dr_elv_trim", "sim/flightmodel/controls/elv_trim")
+    dataref("dr_trim_pos", "laminar/B738/switch/capt_trim_pos")
+    dataref("dr_lower_du", "laminar/B738/systems/lowerDU_page")
+    dataref("dr_autobrake", "laminar/B738/autobrake/autobrake_pos")
+    dataref("dr_mcp_alt", "laminar/B738/autopilot/mcp_alt_dial")
+    dataref("dr_mcp_spd", "sim/cockpit2/autopilot/airspeed_dial_kts_mach")
+    dataref("dr_starter1", "laminar/B738/engine/starter1_pos")
+    dataref("dr_starter2", "laminar/B738/engine/starter2_pos")
+    dataref("dr_temp_ambient", "sim/weather/temperature_ambient_c")
+    dataref("dr_eng_ai1", "laminar/B738/ice/eng1_heat_pos")
+    dataref("dr_eng_ai2", "laminar/B738/ice/eng2_heat_pos")
+    dataref("dr_wing_ai", "laminar/B738/ice/wing_heat_pos")
+    dataref("dr_probe_cpt", "laminar/B738/toggle_switch/capt_probes_pos", "writeable")
+    dataref("dr_probe_fo", "laminar/B738/toggle_switch/fo_probes_pos", "writeable")
+    dataref("dr_apu_door", "laminar/B738/electrical/apu_door")
+    dataref("dr_apu_start_load", "laminar/B738/electric/apu_start_load")
+
     -- Taxi in flow
     -- Triggered when:
     --      Flap lever moved to UP (because the joystick axis needs to be moved up manually)
