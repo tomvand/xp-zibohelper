@@ -7,6 +7,8 @@ if PLANE_ICAO == "B738" then
     dataref("dr_elv_trim", "sim/flightmodel/controls/elv_trim")
     dataref("dr_trim_pos", "laminar/B738/switch/capt_trim_pos")
     dataref("dr_lower_du", "laminar/B738/systems/lowerDU_page")
+    dataref("dr_fd_cpt", "laminar/B738/switches/autopilot/fd_ca")
+    dataref("dr_fd_fo", "laminar/B738/switches/autopilot/fd_fo")
     dataref("dr_autobrake", "laminar/B738/autobrake/autobrake_pos")
     dataref("dr_mcp_alt", "laminar/B738/autopilot/mcp_alt_dial")
     dataref("dr_mcp_spd", "sim/cockpit2/autopilot/airspeed_dial_kts_mach")
@@ -43,7 +45,7 @@ if PLANE_ICAO == "B738" then
         -- Check trigger
         if tif_step == 0 then
             if (dr_flap == 0.0 and tif_previous_flap ~= 0.0)
-            and dr_onground_any
+            and (dr_onground_any ~= 0)
             and (dr_land_lights_left ~= 0) then
                 tif_next(1.0)
             end
