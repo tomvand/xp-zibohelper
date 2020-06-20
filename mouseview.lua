@@ -30,6 +30,18 @@ if PLANE_ICAO == "B738" then
         "sim/view/quick_look_9"  -- AFT Overhead
     }
     center_view = 4
+elseif PLANE_ICAO == "A320" then
+    view_commands = {
+        "sim/view/quick_look_3", -- Aft pedestal
+        "sim/view/quick_look_2", -- Pedestal
+        "sim/view/quick_look_1", -- ECAM
+        "sim/view/quick_look_5", -- FCU
+        "sim/view/quick_look_7", -- CPT view (zoomed)
+        "sim/view/quick_look_4", -- CPT view
+        "sim/view/quick_look_8", -- Overhead
+        "sim/view/quick_look_9"  -- Aft overhead
+    }
+    center_view = 6
 end
 
 local current_view = center_view
