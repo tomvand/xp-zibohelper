@@ -1,6 +1,8 @@
 local seatbelts_cmd = "sim/systems/seatbelt_sign_toggle"
 
-if PLANE_ICAO == "A320" then
+if PLANE_ICAO == "B738" then
+  seatbelts_cmd = "zibohelper/seatbelts_toggle"
+elseif PLANE_ICAO == "A320" then
   seatbelts_cmd = "a320helper/seatbelts_toggle"
 end
 
@@ -12,7 +14,9 @@ local pushback_state = PUSHBACK_STATE_CONNECT
 local function is_seatbelts_on()
   if get("sim/cockpit2/switches/fasten_seat_belts") > 0.5 then
     return true
-  elseif get("a320/Overhead/LightBelts") > 0.5 then
+  elseif get("laminar/B738/toggle_switch/seatbelt_sign_pos") > 1.5 then
+    return true
+  elseif get("a320/Overhead/LightBelts") > 1.5 then
     return true
   end
   return false
