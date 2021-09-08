@@ -52,6 +52,25 @@ elseif PLANE_ICAO == "B744" then
         "sim/view/quick_look_8"  -- Overhead
     }
     center_view = 5
+elseif PLANE_ICAO == "DH8D" then
+    view_commands = {
+        "sim/view/quick_look_2", -- Pedestal
+        "sim/view/quick_look_5", -- Center panel
+        "sim/view/quick_look_1", -- PFD lean-in
+        "sim/view/quick_look_4", -- CPT view
+        "sim/view/quick_look_7", -- Warning indicators
+        "sim/view/quick_look_8", -- Overhead
+    }
+    center_view = 4
+elseif PLANE_ICAO == "E170" or PLANE_ICAO == "E195" then
+    view_commands = {
+        "sim/view/quick_look_2", -- Pedestal
+        "sim/view/quick_look_1", -- MCDU
+        "sim/view/quick_look_4", -- CPT view
+        "sim/view/quick_look_7", -- Adjustment
+        "sim/view/quick_look_8", -- Overhead
+    }
+    center_view = 3
 end
 
 local current_view = center_view

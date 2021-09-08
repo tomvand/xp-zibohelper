@@ -12,11 +12,11 @@ local PUSHBACK_STATE_DONE = 2
 local pushback_state = PUSHBACK_STATE_CONNECT
 
 local function is_seatbelts_on()
-  if get("sim/cockpit2/switches/fasten_seat_belts") > 0.5 then
+  if PLANE_ICAO == "B738" and get("laminar/B738/toggle_switch/seatbelt_sign_pos") > 1.5 then
     return true
-  elseif get("laminar/B738/toggle_switch/seatbelt_sign_pos") > 1.5 then
+  elseif PLANE_ICAO == "A320" and get("a320/Overhead/LightBelts") > 1.5 then
     return true
-  elseif get("a320/Overhead/LightBelts") > 1.5 then
+  elseif get("sim/cockpit2/switches/fasten_seat_belts") > 0.5 then
     return true
   end
   return false
