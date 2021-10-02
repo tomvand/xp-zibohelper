@@ -9,11 +9,10 @@ if PLANE_ICAO == "B738" then
   local taxi_state = 0
   local strobe_state = 0
 
-  if axis[AXIS_LANDINGLIGHTS] < 0 or axis[AXIS_STROBELIGHTS] < 0 or axis[AXIS_TAXILIGHTS] < 0 then
-    return -- Joystick not connected
-  end
-
   function zibohelper_lights_axes_on_frame()
+    if axis[AXIS_LANDINGLIGHTS] < 0 or axis[AXIS_STROBELIGHTS] < 0 or axis[AXIS_TAXILIGHTS] < 0 then
+      return -- Joystick not connected
+    end
     -- Landing lights
     if 2 * axis[AXIS_LANDINGLIGHTS] > landing_state + 0.6 then
       landing_state = landing_state + 1
